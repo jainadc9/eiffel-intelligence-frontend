@@ -107,7 +107,7 @@ jobs:
       - name: Run Integration tests
         run: |
           mvn --version
-          mvn verify -P integrationTest -DskipUTs -Dei.backend.instances.list.json.content=\"[{ 'contextPath': '', 'port': '${EI_BACKEND_PORT}', 'name': 'EI-Backend-1', 'host': 'localhost', 'https': false, 'defaultBackend': true}]\" -B 
+          "mvn verify -P integrationTest -DskipUTs -Dei.backend.instances.list.json.content=\"[{ 'contextPath': '', 'port': '${EI_BACKEND_PORT}', 'name': 'EI-Backend-1', 'host': 'localhost', 'https': false, 'defaultBackend': true}]\" -B" 
           
       - name: After script
         run: |    
