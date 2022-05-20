@@ -1,7 +1,7 @@
 ARG JENKINS_IMAGE
 FROM ${JENKINS_IMAGE}
 
-COPY plugins.sh /usr/local/bin/plugins.sh
+COPY ./jenkins-plugins /usr/share/jenkins/plugins
+RUN /usr/local/bin/install-plugins.sh groovy:2.1
 
-RUN /usr/local/bin/plugins.sh groovy:2.1
 # RUN /install-plugins.sh groovy:2.1
