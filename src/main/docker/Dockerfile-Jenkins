@@ -1,5 +1,12 @@
 ARG JENKINS_IMAGE
 FROM ${JENKINS_IMAGE}
 
+## Change user to perform privileged actions
+USER 0
 RUN jenkins-plugin-cli --plugin groovy:2.1
+
+## Revert to the original non-root user
+USER 1001
+
+
 
