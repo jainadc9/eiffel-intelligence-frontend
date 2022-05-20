@@ -1,7 +1,7 @@
 ARG JENKINS_IMAGE
 FROM ${JENKINS_IMAGE}
 
-RUN jenkins-plugin-cli --plugin groovy:2.1
+RUN jenkins-plugin-cli --plugins groovy:2.1
 
 
 
