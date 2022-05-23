@@ -111,8 +111,8 @@ jobs:
           
       - name: After script
         run: |    
-          docker-compose -f src/main/docker/docker-compose.yml down
-          # fuser -k ${EI_BACKEND_PORT}/tcp
+          docker-compose -f src/main/docker/docker-compose.yml down || true
+          fuser -k ${EI_BACKEND_PORT}/tcp
         
   reportCoverage:
     if: github.repository == 'eiffel-community/eiffel-intelligence-frontend' && github.event_name == 'push'
