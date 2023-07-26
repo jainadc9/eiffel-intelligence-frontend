@@ -39,7 +39,7 @@ jobs:
       - name: Setup firefox
         uses: browser-actions/setup-firefox@latest
         with:
-          firefox-version: "latest"
+          firefox-version: "61.0.1"
          
       - name: Install Maven
         shell: bash
