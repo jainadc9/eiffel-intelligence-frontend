@@ -71,7 +71,7 @@ public class SeleniumConfig {
 
     private static FirefoxBinary getFirefoxBinary() {
         // Firefox binary will be stored in <repository>/target/firefox/firefox/<binary>
-        String firefoxPath = getFirefoxDirPath().getPath();
+        String firefoxPath = "/opt/";//getFirefoxDirPath().getPath();
         File firefoxBinaryFilePath = new File(
                 String.join(File.separator, firefoxPath, "firefox", "firefox"));
 
